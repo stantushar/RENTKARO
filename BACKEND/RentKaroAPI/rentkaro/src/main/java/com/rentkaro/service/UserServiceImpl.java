@@ -20,18 +20,18 @@ public class UserServiceImpl implements UserService {
 	public UserRepository userRepo;
 	@Autowired
 	public ModelMapper modelMap;
+
 	@Override
 	public User addUser(UserSignUpDTO obj) {
-		
 		User userObj = modelMap.map(obj, User.class);
 		UserAddress userAddress = modelMap.map(obj, UserAddress.class);
 		userObj.addUserAddress(userAddress);
 		return userRepo.save(userObj);
-		
 	}
+
 	@Override
 	public List<User> getUsers() {
-	
 		return userRepo.findAll();
 	}
+
 }

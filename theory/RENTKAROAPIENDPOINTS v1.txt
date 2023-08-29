@@ -37,16 +37,16 @@ shreyansh
 
 
 
-prajwal & tushar
+prajwal 
 
-/profile				--> 	highlight all the details about user details
-/profile/edit				--> 	profile editing update
-/profile/my-orderlist			--> 	bought product orderlist 
+/profile --done				--> 	highlight all the details about user details
+/profile/edit --done			--> 	profile editing update
+/profile/my-orderlist --done		--> 	bought product orderlist 
 /profile/my-orderlist/return		--> 	return product 
-/profile/my-products			---> 	sellers product list
-/profile/my-products/update		---> 	update modify the existing product of mine
-/profile/my-products/delete		--> 	delete my product from the website
-/profile/deleteaccount			--> 	delete my account 	
+/profile/my-products --done		---> 	sellers product list
+/profile/my-products/update --done	---> 	update modify the existing product of mine
+/profile/my-products/delete --done	--> 	delete my product from the website
+/profile/deleteaccount --done		--> 	delete my account 	
 
 /report -----> PENDING
 

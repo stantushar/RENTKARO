@@ -1,6 +1,8 @@
 package com.rentkaro.pojos;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -30,8 +33,9 @@ public class OrderHistory  {
 	private Long orderId;
 	@OneToOne(cascade = CascadeType.ALL)@JoinColumn(name = "product_id")
 	private Product product;
-	@OneToOne(cascade = CascadeType.ALL)@JoinColumn(name = "renter")
-	private User renter;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="renter_id")
+	private User renterList;// change the name here
 	@Column(name = "ordered_date")
 	private LocalDate orderedDate;
 	@Column(name = "transaction_id")
@@ -39,4 +43,5 @@ public class OrderHistory  {
 	@Column(name = "total_amount")
 	private Double amount;  //no. of days to rent * product price rent/ day
 	
+
 }

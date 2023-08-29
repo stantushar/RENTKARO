@@ -15,7 +15,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
+
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,9 +27,15 @@ public class Rating {
 	private Long id;
 	@OneToOne @JoinColumn(name = "product")
 	private Product product;
-	//pending under constructor for shreyansh
 	@ManyToOne @JoinColumn(name = "renter")
 	private User renter;
 	private Float rating;
+	
+	public Float getRating() {
+		return rating;
+	}
+	public String getProduct() {
+		return product.getProductName();
+	}
 }
 
